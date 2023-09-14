@@ -1,0 +1,56 @@
+{
+    "openTime": "22:34:55",
+    "url": " https://wechat.v2.traceint.com/index.php/graphql/",
+    "header": {
+        "Host": "wechat.v2.traceint.com",
+        "Connection": "keep-alive",
+        "Content-Length": "311",
+        "App-Version": "2.0.14",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 NetType/WIFI MicroMessenger/7.0.20.1781(0x6700143B) WindowsWechat(0x63090621) XWEB/8391 Flue",
+        "Content-Type": "application/json",
+        "Accept": "',*/*'",
+        "X-Requested-With": "",
+        "Origin": "https://web.traceint.com",
+        "Sec-Fetch-Site": "same-site",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://web.traceint.com/",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "zh-CN,zh",
+        "Cookie": "Authorization=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjI0OTc1MjUyLCJzY2hJZCI6MjAwNTgsImV4cGlyZUF0IjoxNjk0Njc1OTkxfQ.pm-idNH4I1WhSVr1KY1lmr2WR4QPCU7BVoaC-UNIF8Pe8VvqJnjxf_xyBpTwPumfNCymWxVQMTm96q3NNNGMgfLv8RMd0Xx_VaAZ8lQFew9Eo982A6wpF5FfmAunKOLD9FJOV3Dq5YNDPeknGzckoVHR30BENPqGRWBynxG5xVmTZQLScYhkDGIkAiJoDPw_1Vdj5Fxw3gqyeZHtnjoNT-S_Wr0-QOPHCOWWF4_Seq5YPl_VEa-Bo5wBBcV88N1_tOPro2al1fTCVAsGKtOlcgd35fPDs9YOViH5Y7_1BJShOirT7QPt25sqCYc9vJz1Ll1YlnKLGPgMQTpqPBguvQ; SERVERID=e3fa93b0fb9e2e6d4f53273540d4e924|1694668792|1694668792; SERVERID=82967fec9605fac9a28c437e2a3ef1a4|1694668791|1694668791"
+    },
+    "queue_header": {
+        "Host": "wechat.v2.traceint.com",
+        "Connection": "Upgrade",
+        "Pragma": "no-cache",
+        "Cache-Control": "no-cache",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 NetType/WIFI MicroMessenger/7.0.20.1781(0x6700143B) WindowsWechat(0x63090621) XWEB/8391 Flue",
+        "Upgrade": "websocket",
+        "Origin": "https://web.traceint.com",
+        "Sec-WebSocket-Version": "13",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "zh-CN,zh",
+        "Sec-WebSocket-Extensions": "permessage-deflate; client_max_window_bits",
+        "Cookie": "Authorization=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjI0OTc1MjUyLCJzY2hJZCI6MjAwNTgsImV4cGlyZUF0IjoxNjk0Njc1OTkxfQ.pm-idNH4I1WhSVr1KY1lmr2WR4QPCU7BVoaC-UNIF8Pe8VvqJnjxf_xyBpTwPumfNCymWxVQMTm96q3NNNGMgfLv8RMd0Xx_VaAZ8lQFew9Eo982A6wpF5FfmAunKOLD9FJOV3Dq5YNDPeknGzckoVHR30BENPqGRWBynxG5xVmTZQLScYhkDGIkAiJoDPw_1Vdj5Fxw3gqyeZHtnjoNT-S_Wr0-QOPHCOWWF4_Seq5YPl_VEa-Bo5wBBcV88N1_tOPro2al1fTCVAsGKtOlcgd35fPDs9YOViH5Y7_1BJShOirT7QPt25sqCYc9vJz1Ll1YlnKLGPgMQTpqPBguvQ; SERVERID=e3fa93b0fb9e2e6d4f53273540d4e924|1694668792|1694668792; SERVERID=82967fec9605fac9a28c437e2a3ef1a4|1694668791|1694668791"
+    },
+	    "data1": {
+        "operationName": "save",
+        "query": "mutation save($key: String!, $libid: Int!, $captchaCode: String, $captcha: String) {\n userAuth {\n prereserve {\n save(key: $key, libId: $libid, captcha: $captcha, captchaCode: $captchaCode)\n }\n }\n}",
+        "variables": {
+            "key": "7,10.",
+            "libid": 114222,
+            "captchaCode": "",
+            "captcha": ""
+        }
+    },
+    "data2": {
+        "operationName": "save",
+        "query": "mutation save($key: String!, $libid: Int!, $captchaCode: String, $captcha: String) {\n userAuth {\n prereserve {\n save(key: $key, libId: $libid, captcha: $captcha, captchaCode: $captchaCode)\n }\n }\n}",
+        "variables": {
+            "key": "7,24.",
+            "libid": 114224,
+            "captchaCode": "",
+            "captcha": ""
+        }
+    }
+}
