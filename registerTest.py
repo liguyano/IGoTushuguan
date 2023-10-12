@@ -13,6 +13,8 @@ queHandle={}
 queList=[]
 def loadCookie() -> str:
     json_file_path = "./config/config1.json"
+    global linid
+    global seat
     # 读取 JSON 文件并将其解析为 JSON 对象
     with open(json_file_path, "r") as json_file:
         json_data = json.load(json_file)
@@ -63,7 +65,6 @@ def registerSeat():
              "variables": {"key": seat, "libid": linid, "captchaCode": "", "captcha": ""}}
     print(eval(send(date3)))
     hello('wss://wechat.v2.traceint.com/ws?ns=prereserve/queue')
-    time.sleep(1)
     saveStatueCheck = {"operationName": "prereserve",
                        "query": "query prereserve {\n userAuth {\n prereserve {\n prereserve {\n day\n lib_id\n seat_key\n seat_name\n is_used\n user_mobile\n id\n lib_name\n }\n }\n }\n}"}
     print(eval(send(saveStatueCheck)))
@@ -76,8 +77,11 @@ def registerSeat():
     print(eval(send(libLayout)))
     saveSeat = {"operationName": "save",
                 "query": "mutation save($key: String!, $libid: Int!, $captchaCode: String, $captcha: String) {\n userAuth {\n prereserve {\n save(key: $key, libId: $libid, captcha: $captcha, captchaCode: $captchaCode)\n }\n }\n}",
-                "variables": {"key": seat, "libid":linid, "captchaCode": "", "captcha": ""}}
+                "variables": {"key": seat, "libid": linid, "captchaCode": "", "captcha": ""}}
     print(eval(send(saveSeat)))
+
+
+
     saveSeat = {"operationName": "save",
                 "query": "mutation save($key: String!, $libid: Int!, $captchaCode: String, $captcha: String) {\n userAuth {\n prereserve {\n save(key: $key, libId: $libid, captcha: $captcha, captchaCode: $captchaCode)\n }\n }\n}",
                 "variables": {"key": "11,15.", "libid": 114222, "captchaCode": "", "captcha": ""}}
@@ -88,14 +92,11 @@ def registerSeat():
     b = eval(a.text)
     print(b)
 if __name__ == '__main__':
+    startTime=time.time()
     header = {
         "Cookie": loadCookie()
     }
     extra_headers = [("Cookie", header['Cookie'])]
-    t=threading.Thread(target=registerSeat)
-    time.sleep(1)
-    registerSeat()
-
-
-
-
+    while True:
+        registerSeat()
+        print(time.time()-startTime)
